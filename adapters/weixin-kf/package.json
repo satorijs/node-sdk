@@ -1,0 +1,43 @@
+{
+  "name": "@satorijs/adapter-weixin-kf",
+  "description": "Weixin Kf Adapter for Satorijs",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "author": "LittleC <i@ltlec.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satorijs/satori.git",
+    "directory": "adapters/weixin-kf"
+  },
+  "bugs": {
+    "url": "https://github.com/satorijs/satori/issues"
+  },
+  "homepage": "https://koishi.chat/plugins/adapter/weixin-kf.html",
+  "keywords": [
+    "bot",
+    "wechat",
+    "weixin",
+    "official",
+    "chatbot",
+    "satori",
+    "im",
+    "chat"
+  ],
+  "devDependencies": {
+    "@cordisjs/server": "^0.1.8",
+    "@types/xml2js": "^0.4.14"
+  },
+  "peerDependencies": {
+    "@satorijs/satori": "^3.6.3"
+  },
+  "dependencies": {
+    "@wecom/crypto": "^1.0.1",
+    "xml2js": "^0.6.2"
+  }
+}
