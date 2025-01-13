@@ -1,0 +1,38 @@
+{
+  "name": "koishi-plugin-infoflow-adapter",
+  "description": "如流适配器",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "contributors": [
+    "firstmeet <2022742378@qq.com>"
+  ],
+  "homepage": "https://github.com/firstmeet1108/infoflow-adapter",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin",
+    "infoflow-adapter",
+    "koishi-plugin",
+    "koishi-plugin-infoflow-adapter",
+    "koishi-plugin-infoflow",
+    "如流",
+    "如流适配器",
+    "如流适配器插件",
+    "百度"
+  ],
+  "peerDependencies": {
+    "koishi": "^4.18.1"
+  },
+  "dependencies": {
+    "crypto-js": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4"
+  }
+}

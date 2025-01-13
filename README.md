@@ -26,7 +26,7 @@
   - [x] WeCom (企业微信)
   - [x] Wechat Official (微信公众号)
   - [x] Zulip
-
+  - [x] Infoflow（如流）
 ## Examples
 
 ### Basic usage
