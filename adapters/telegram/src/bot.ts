@@ -57,7 +57,7 @@ export class TelegramBot<C extends Context = Context, T extends TelegramBot.Conf
     if (config.files.server ?? selfUrl) {
       const route = `/telegram/${this.selfId}`
       this.server = selfUrl + route
-      ctx.get('server').get(route + '/:file+', async ctx => {
+      ctx.get('server').get(route + '/:file(.+)', async ctx => {
         const { data, type } = await this.$getFile(ctx.params.file)
         ctx.set('content-type', type)
         ctx.body = Buffer.from(data)
@@ -177,8 +177,8 @@ export class TelegramBot<C extends Context = Context, T extends TelegramBot.Conf
     if (!avatar) return
     const { file_id } = avatar[avatar.length - 1]
     const file = await this.internal.getFile({ file_id })
-    if (this.server) {
-      user.avatar = `${this.server}/${file.file_path}`
+    if (this.local || this.server) {
+      user.avatar = (await this.$getFileFromPath(file.file_path)).src
     } else {
       const { endpoint } = this.file.config
       user.avatar = `${endpoint}/${file.file_path}`
